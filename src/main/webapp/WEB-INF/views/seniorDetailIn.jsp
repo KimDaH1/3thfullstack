@@ -24,14 +24,16 @@
 	margin-top: 150px;
 }
 .scheduleDiv{
-	width: 100px;
-	height: 150px;
+	width: 50px;
+	height: 70px;
 	background-color: lightgray;
 	margin: 5px;
 	display: inline-block;
 	border-radius: 5px;
 }
 #scheduleContainer{
+	height : 264px;
+	padding:10px;
 	width: 450px;
 	overflow: auto;
 	white-space: nowrap;
@@ -111,7 +113,9 @@
     font-family: 'omyu_pretty';
 }
 .weekday{
-	margin-left: 75px;
+	margin-left: 28px;
+	position: relative;
+	right: 32px;
 }
 .timeContainer{
 	height: 150px;
@@ -167,8 +171,8 @@
 		<span class="weekday">목요일</span>
 		<span class="weekday">금요일</span><br>
 		
-		<div class="timeContainer">
-			<p>오전(09:00~12:00)<p>
+		<div class="timeContainer" style="height: 30px;">
+			<p style="position: relative; bottom: 35px;">오전(09:00~12:00)<p>
 		</div>
 		<c:forEach var="item" items="${seniorEnableSchedule}">
 			<c:set var="code" value="${item.scheduleCode}"/>
@@ -182,7 +186,7 @@
 		
 		<br>
 		<div class="timeContainer">
-			<p>오후(14:00~18:00)</p>
+			<p style="position: relative; bottom: 35px;">오후(14:00~18:00)</p>
 		</div>
 		<c:forEach var="item" items="${seniorEnableSchedule}">
 			<c:set var="code" value="${item.scheduleCode}"/>
@@ -193,7 +197,10 @@
 			">
 			</div>
 		</c:forEach>
+			<br><span style=" display: inline-block;">가능<div style="width: 10px; height: 10px; background-color: #01B399; "></div></span>
+			 <span style=" display: inline-block; white-space:pre; position: relative; left: 10%;">불가능<div style="width: 10px; height: 10px; background-color: #C6C3BD;white-space:pre; "></div></span>
 	</div>
+	
 	<br>
 	<div id="btnContainer">
 		<button type="button" id="btn" onclick="location.href='/askForSenior?id=${seniorDetail.id}'">도우미 신청하기</button>
