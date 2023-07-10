@@ -6,6 +6,7 @@ import com.kids.dto.senior.SeniorDto;
 
 import java.util.Map;
 
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.dto.image.ImageFileDTO;
 import com.kids.dto.senior.SeniorDetailDto;
 import com.kids.dto.senior.SeniorScheduleDto;
@@ -29,5 +30,5 @@ public interface SeniorService {
 	public int updateSchedule(Map<String, String> map);
 	public ImageFileDTO getImgById(String id);
 	public int updateScheduleWorkStatus(Map<String, String> map);
-	
+	public String selectVerificationStatus(String id);
 }

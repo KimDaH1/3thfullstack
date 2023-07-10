@@ -2,12 +2,21 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>마이페이지</title>
 <link rel="stylesheet" href="/resources/css/mypage_css.css">
+<style type="text/css">
+	.nameTag {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space:pre;
+	}
+</style>
 </head>
 <body>
 <%@ include file="header.jsp"%>
@@ -15,7 +24,26 @@
 	<h1>Mypage</h1>
 	
 	<form action="" method="post" enctype="multipart/form-data">	
-		<h1>${seniorDetail.name}님 만${2023 - fn:substring(seniorDetail.birthday, 0, 4)}세</h1>
+	<div>	
+		<div class="nameTag">
+			<h1>                                ${seniorDetail.name}님 만${2023 - fn:substring(seniorDetail.birthday, 0, 4)}세   </h1>
+			<c:choose>
+				<c:when test="${seniorverificationstatus == 'Y'}">
+					<img alt="인증" src="/resources/image/인증완료.jpg" style="width: 200px; height: 200px;">	
+				</c:when>
+				<c:when test="${seniorverificationstatus == 'N'}">
+					<img alt="미인증" src="/resources/image/인증기다리는중.jpg" style="width: 200px; height: 200px;">	
+				</c:when>
+				<c:when test="${seniorverificationstatus == 'Rejected'}">
+					<img alt="인증실패" src="/resources/image/다시인증.jpg" style="width: 200px;  height: 200px;" onclick="location.href='/certification'">
+				</c:when>
+				<c:when test="${seniorverificationstatus == null}">
+					<img alt="인증실패" src="/resources/image/인증하러가기.jpg" style="width: 200px;  height: 200px;" onclick="location.href='/certification'">
+				</c:when>
+			</c:choose>
+		</div>
+	</div>
+
 
 		<label for="image">     
             <img class="profileimage" id="preview" src="${pageContext.request.contextPath}/image/profile/${seniorImg.fileName}" onerror="this.onerror=null;this.src='/resources/image/no_profile.png'">
@@ -26,8 +54,11 @@
 		
 		<div class="smallContainer">
 		<p id="pw_p">비밀번호 <button type="button" onclick="location.href='/changePassword'">수정</button></p><br>
-		<p id="pw_p" style="margin-left: 130px;">시니어 추가인증 <button type="button" onclick="location.href='/certification'" style=" width: 130px;">인증하러가기</button></p><br>
-		
+		<p id="pw_p" style="margin-left: 130px;"><button type="button" onclick="location.href='/certification'" style=" width: 130px;">인증하러가기</button></p><br>
+
+		<c:if test="${status == 'Rejected'}">
+		<p id="pw_p" style="margin-left: 130px;"><button type="button" onclick="location.href='/certification'" style=" width: 130px;">다시 인증하러가기</button></p><br>
+		</c:if>
 		<div style="background-color: white; border-radius: 10px; margin-bottom: 10px;">
 		<label>전화번호</label><br>
 		<input type="text" class="input_h" name="phoneNumber" value="${seniorDetail.phoneNumber}" style="font-size:1.2rem;" disabled><br>

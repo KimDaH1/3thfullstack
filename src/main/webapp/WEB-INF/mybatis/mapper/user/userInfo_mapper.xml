@@ -23,7 +23,7 @@
 	</insert> 
 	
  	
- 	
+ 		
  	<insert id="insert_senior_userInfo" parameterType="UserInfo_Dto">
 		insert into SNR <!-- 시니어가입 폼 -->
 		<!-- 컬럼명 -->

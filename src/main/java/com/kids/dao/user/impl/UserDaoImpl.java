@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.kids.dao.user.UserDao;
 import com.kids.dto.report.ReportDto;
+import com.kids.dto.senior.SeniorDto;
 import com.kids.dto.user.UserDto;
 
 @Repository
@@ -38,4 +39,6 @@ public class UserDaoImpl implements UserDao{
 		int result = sqlSessionTemplate.update("user_mapper.update_user_password", userDto);
 		return result;
 	}
+
+
 }

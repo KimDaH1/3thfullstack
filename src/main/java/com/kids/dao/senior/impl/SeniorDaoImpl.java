@@ -12,6 +12,7 @@ import com.kids.dto.senior.SeniorDto;
 
 import java.util.Map;
 
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.dto.image.ImageFileDTO;
 import com.kids.dto.senior.SeniorDetailDto;
 import com.kids.dto.senior.SeniorScheduleDto;
@@ -123,5 +124,10 @@ public class SeniorDaoImpl implements SeniorDao {
 		int result = sqlSessionTemplate.update("senior_mapper.update_schedule_work_status", map);
 		return result;
 	}
-
+	
+	@Override
+	public String selectVerificationStatus(String id) {
+		String result = sqlSessionTemplate.selectOne("senior_mapper.select_varification_status", id);
+		return result;
+	}
 }

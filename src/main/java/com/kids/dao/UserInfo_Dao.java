@@ -3,7 +3,8 @@ package com.kids.dao;
 import java.util.List;
 import java.util.Map;
 
-import com.kids.dto.*;
+import com.kids.dto.UserInfo_Dto;
+import com.kids.dto.certification.CertificationDTO;
 
 public interface UserInfo_Dao {
 	

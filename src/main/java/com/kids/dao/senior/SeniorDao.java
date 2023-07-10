@@ -1,13 +1,12 @@
 package com.kids.dao.senior;
 
 import java.util.List;
-
-import com.kids.dto.senior.SeniorDto;
-
 import java.util.Map;
 
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.dto.image.ImageFileDTO;
 import com.kids.dto.senior.SeniorDetailDto;
+import com.kids.dto.senior.SeniorDto;
 import com.kids.dto.senior.SeniorScheduleDto;
 
 public interface SeniorDao {
@@ -29,4 +28,5 @@ public interface SeniorDao {
 	public int updateSchedule(Map<String, String> map);
 	public ImageFileDTO selectImgById(String id);
 	public int updateScheduleWorkStatus(Map<String, String> map);
+	public String selectVerificationStatus(String id);
 }

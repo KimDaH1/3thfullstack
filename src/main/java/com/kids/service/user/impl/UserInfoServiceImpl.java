@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.kids.dao.UserInfo_Dao;
 import com.kids.dto.UserInfo_Dto;
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.service.user.UserInfoService;
 
 @Service
@@ -105,5 +106,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 		// TODO Auto-generated method stub
 		return userInfo_dao.insertSnrSchedule(map);
 	}
+
 	
 }

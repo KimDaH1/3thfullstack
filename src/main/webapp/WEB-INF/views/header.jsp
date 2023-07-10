@@ -96,7 +96,7 @@ header {
 
 <%
     String userId = (String) session.getAttribute("userId");
-    String userCode = (String) session.getAttribute("userCode");
+    String userCode = (String) session.getAttribute("userCode"); 
 %>
 
 <header class="header_t" id="header_t_id" style="top: 0px;">

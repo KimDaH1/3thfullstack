@@ -106,7 +106,7 @@ public class UserInfoDao_impl implements UserInfo_Dao{
 		return result ;
 		
 	}
-
+	
 //	@Override
 //	public int insertSnrSchedule(Map<String, String> map) {
 //		// TODO Auto-generated method stub

@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.dto.image.ImageFileDTO;
 import com.kids.dto.senior.SeniorDetailDto;
 import com.kids.dto.senior.SeniorScheduleDto;
@@ -43,6 +43,7 @@ public class SeniorController {
 			model.addAttribute("seniorDetail", seniorDetail);
 			model.addAttribute("seniorEnableSchedule", seniorEnableSchedule);
 			model.addAttribute("parentsImg", parentsImg);
+		
 			return "seniorDetailIn";
 		}
 	}

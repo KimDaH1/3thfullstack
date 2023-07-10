@@ -23,7 +23,7 @@
 		select * from verification
 				 where id = #{id}
 	</select>
-	
+
 	<!--인증 여부 컬럼 Y로 변경 (승인)-->
 	<update id= "update_verification_status_as_Y" parameterType="SeniorDto">
 		UPDATE verification 
@@ -53,6 +53,7 @@
 			where u.id = #{value}
 	</select>
 	
+
 	<update id="update_user_info" parameterType="SeniorDetailDto">
 		update user_info set
 			password = NVL(#{password}, password),
@@ -98,4 +99,9 @@
 		where id = #{id} and schedule_code = #{scheduleCode}
 	</update>
 
+	<select id="select_varification_status" parameterType="String" resultType = "String">
+	select verification_status
+	from verification
+	WHERE id = #{id} 
+	</select>
 </mapper>

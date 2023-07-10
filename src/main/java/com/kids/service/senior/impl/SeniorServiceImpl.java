@@ -12,6 +12,7 @@ import com.kids.service.senior.SeniorService;
 
 import java.util.Map;
 
+import com.kids.dto.certification.CertificationDTO;
 import com.kids.dto.image.ImageFileDTO;
 import com.kids.dto.senior.SeniorDetailDto;
 import com.kids.dto.senior.SeniorScheduleDto;
@@ -117,6 +118,13 @@ public class SeniorServiceImpl implements SeniorService{
 	public int updateScheduleWorkStatus(Map<String, String> map) {
 		// TODO Auto-generated method stub
 		int result = seniorDao.updateScheduleWorkStatus(map);
+		return result;
+	}
+
+	@Override
+	public String selectVerificationStatus(String id) {
+		// TODO Auto-generated method stub
+		String result = seniorDao.selectVerificationStatus(id);
 		return result;
 	}
 

@@ -69,13 +69,13 @@ public class MypageController {
 		String id = (String)session.getAttribute("userId");
 		
 		ImageFileDTO seniorImg = seniorService.getImgById(id);
-		
+		String seniorverificationstatus = seniorService.selectVerificationStatus(id);
 		SeniorDetailDto seniorDetail = seniorService.getSeniorDetailById(id);
 		model.addAttribute("seniorDetail", seniorDetail);
 		model.addAttribute("seniorImg", seniorImg);
-		
 		List<SeniorScheduleDto> seniorEnableSchedule = seniorService.getSeniorEnableSchedule(id);
 		model.addAttribute("seniorEnableSchedule", seniorEnableSchedule);
+		model.addAttribute("seniorverificationstatus" , seniorverificationstatus);
 		return "snrMypage";
 	}
 	@PostMapping("/sampleSession")
