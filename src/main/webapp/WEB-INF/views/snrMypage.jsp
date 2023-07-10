@@ -54,11 +54,6 @@
 		
 		<div class="smallContainer">
 		<p id="pw_p">비밀번호 <button type="button" onclick="location.href='/changePassword'">수정</button></p><br>
-		<p id="pw_p" style="margin-left: 130px;"><button type="button" onclick="location.href='/certification'" style=" width: 130px;">인증하러가기</button></p><br>
-
-		<c:if test="${status == 'Rejected'}">
-		<p id="pw_p" style="margin-left: 130px;"><button type="button" onclick="location.href='/certification'" style=" width: 130px;">다시 인증하러가기</button></p><br>
-		</c:if>
 		<div style="background-color: white; border-radius: 10px; margin-bottom: 10px;">
 		<label>전화번호</label><br>
 		<input type="text" class="input_h" name="phoneNumber" value="${seniorDetail.phoneNumber}" style="font-size:1.2rem;" disabled><br>
