@@ -44,6 +44,11 @@
 ### 사용기술
 ![image](https://github.com/KimDaH1/3thfullstack/assets/129045969/d14b80c0-4ab3-4691-ba8b-9c56a212ca06)
 
+### 프로그램 설계(ERD)
+
+![image](https://github.com/KimDaH1/3thfullstack/assets/129045969/21709512-94cb-48d1-b2f5-45316066b3a9)
+
+
 ## 3. Screen
 ### 화면 구성
 
