@@ -27,3 +27,6 @@
 ## 3. Screen
 화면 구성
 
+
+![메인화면](https://github.com/KimDaH1/3thfullstack/assets/129045969/9ab40265-e69f-42f8-9e68-6000934180eb)
+
