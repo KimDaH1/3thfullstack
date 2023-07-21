@@ -27,7 +27,8 @@
 ## 3. Screen
 화면 구성
 
-<img src = "https://github.com/KimDaH1/3thfullstack/assets/129045969/9ab40265-e69f-42f8-9e68-6000934180eb" width="200" height="300">
+### 메인페이지
+<img src = "https://github.com/KimDaH1/3thfullstack/assets/129045969/9ab40265-e69f-42f8-9e68-6000934180eb" width="300" height="400">
 
 
 ![마이페이지수정](https://github.com/KimDaH1/3thfullstack/assets/129045969/3667d423-aae6-4c3f-89f2-d2c40579f1d8)
